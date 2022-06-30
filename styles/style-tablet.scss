@@ -1,0 +1,170 @@
+@media all and (min-width: 768px) and  (max-width: 899px)
+{
+    //===========UTILITY CLASS===============
+    .big-title {font-size: 150px}
+    .smaller-title {font-size: 20px;}
+    .description-txt 
+    {
+        font-size: 16px;line-height: 28px;         
+        width: 100%;        
+    }
+    body {text-align: center;}
+    #btn-menu {display: none;}    
+    .info-title { font-size: 40px; }
+    //===========INTERACTIVE ELEMENTS===============
+    .menu-element, .nav-text
+    {
+        color:rgba(255, 255, 255, 0.8)!important;
+        font-weight: 400!important;
+    }
+    .menu-element label{color:white!important;}
+
+    header
+    {
+        width: 100%;
+        #site-icon {margin-left: 2em;}
+        .menu-element::after, .nav-text::after{bottom: -2em;}
+        #menu 
+        {
+            all:unset!important;  
+            list-style-type: none!important;
+    
+            display: flex!important;
+            justify-content: center!important;
+            align-items: center!important;
+            gap: 2em!important;
+    
+            background-color: rgba(255, 255, 255, 0.07)!important;         
+            backdrop-filter: blur(81.5485px)!important;
+            padding: 2em!important;                   
+            max-width: 700px;
+            
+            #btn-close-menu {display: none!important;}
+            .menu-element:first-of-type,.menu-element{margin: inherit!important;}  
+            .menu-element label {display: none;}          
+        }        
+    }
+
+    //HOME
+    #home
+    {
+        background: url("../assets/home/background-home-tablet.jpg") no-repeat 0 0 / 100vw 100%;
+        main {margin-top: 6em;}
+        .description-txt{width: 444px;}
+        #explore-btn
+        {
+            margin-top: 10vh;
+            width: 242px;
+            height: 242px;    
+        }
+        #explore-btn:hover::after
+        {   
+            width: 387px;
+            height: 387px;
+        }
+    }
+    //DESTINATION
+    #destination
+    {
+        background: url("../assets/destination/background-destination-tablet.jpg") no-repeat 0 0 / 100vw 100%;    
+        main
+        { 
+            margin-top: 2em;
+            .star-img { width: 300px; height: 300px;}
+            .description-txt{width: 573px;}    
+            
+            #star-infos-container {display: flex; justify-content: center; gap:8em;}
+        }
+    }
+    //CREW
+    #crew
+    {   
+        display: flex; 
+        flex-direction: column;        
+        main
+        {             
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;          
+
+            width: 90%; 
+            max-width: 1200px;
+            margin: 0em auto 0 auto;
+            flex: 1;
+
+            .crew-img, hr {display: none}
+
+            #first-column
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+                width: 100%;                              
+                h5 {text-align: left; margin: 2em 0 0 0 ;}
+                #crew-list{order: 1;}   
+                .slider-element {width: 15px; height: 15px;}  
+                .crew-job {font-size: 24px; margin: 2em 0 0 0;}
+                .description-txt{ width: 75%; margin: 0 auto}                 
+            }
+            #second-column
+            {
+                display: flex;
+                flex-direction: column;
+                flex:1;
+                margin-top: 2em;
+                #crew-img-desktop
+                {                
+                    display: block;
+                    height: none;
+                    max-height: none;
+                    margin: 0 auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+
+    //TECH
+    #technology
+    {
+        main
+        {
+            width: 100%;
+            margin: 4em auto 0 auto;
+            .smaller-title {text-align: left; margin-left: 2em;}
+
+            #tech-container
+            {                
+                
+                #tech-infos-container 
+                {                    
+                    .description-txt { max-width: 502px;}             
+                    #tech-title {margin: 0;}
+                    .info-title {margin-bottom: 0em;}
+                }
+                #tech-list 
+                { 
+                    .tech-element
+                    {                                  
+                        width: 60px;
+                        height: 60px;     
+                        line-height: 60px;            
+                        text-align: center;
+                        font-size: 24px;
+                        margin-bottom: 1.5em;
+                    }
+                }
+                img 
+                {
+                    // position: absolute;
+                    // top:13em;
+                    // right: 0;
+                    // order:1;
+                    // width: 515px;
+                    // height: 527px;
+                }
+            }
+        }
+    }
+}

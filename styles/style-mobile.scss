@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow:wght@400;700&display=swap');
+
+//=========RESET========
+*,*::before,*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+ul {list-style-type: none;}
+a {all:unset;}
+body
+{
+    line-height: 1.5;
+    min-height: 100vh;        
+}
+img,picture {
+    max-width: 100%;
+    display: block;
+}
+input,button,textarea,select {font:inherit;}
+
+@media (prefers-reduced-motion: reduce) {  /* remove animations for people who've turned them off */
+    *,*::before,*::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+//===========UTILITY CLASS===============
+$white: hsl(0, 0%, 100%);
+$blue-space: hsl(231, 77%, 90%);
+$black: hsl(230,35%,7%);
+
+//FONTS
+.font-bellefair {font-family: "Bellefair", serif; color:$white}
+.font-barlow {font-family: "Barlow", serif; color:$white}
+
+.uppercase {text-transform: uppercase;}
+
+.white {color:$white}
+.blue-space {color:$blue-space}
+.black {color:$black}
+
+.big-title {font-size: 80px; color:$white; text-transform: uppercase; font-weight: 400;}
+.smaller-title {font-size: 16px; text-transform: uppercase; letter-spacing: 2px; font-weight: 400;}
+
+.title-label
+{        
+    color:$white;
+    opacity: 0.5;
+}
+.description-txt 
+{
+    font-size: 15px;line-height: 25px; 
+    letter-spacing: 1px; color: $blue-space;    
+    width: 90%; margin: 0 auto;
+}
+.info-title
+{
+    font-family: "Bellefair", serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $white;
+}
+hr 
+{
+    opacity: 0.2; width: 85%;
+    margin: 0em auto 0 auto;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0em auto;    
+    padding-top: 1em;
+
+    #menu {display: none;}
+    #site-icon {width:35px;}
+    #btn-menu {width: 25px; height: 20px;}
+
+    #menu
+    {        
+        position: absolute;        
+        right: 0;
+        top:0;
+        background-color: rgba(255, 255, 255, 0.04); 
+        backdrop-filter: blur(81.5485px); 
+        height: 100vh;
+        width: 67%;
+        z-index: 2;
+
+        #btn-close-menu
+        {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+        }
+        .menu-element
+        {
+            margin-left: 1.8em;
+            margin-bottom: 2em;
+            letter-spacing: .2rem;
+        }
+        .menu-element:first-of-type
+        {
+            margin-top: 35%;
+        }
+    }
+}
+body {text-align: center;}
+h5 {margin: 1em 0 2em 0;}
+.elem-list
+{
+    display: flex;
+    justify-content: center;            
+    gap: 1em;
+    margin: 2em 0 1em 0;
+}
+//===========INTERACTIVE ELEMENTS===============
+.menu-element, .nav-text
+{
+    width: fit-content;
+    label {font-weight: bold;}
+    position: relative;
+    font-family: "Barlow";
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 1);
+}
+.menu-element:hover, .nav-text:hover
+{
+    color:white;
+    cursor: pointer;
+}
+.menu-element::after, .nav-text::after
+{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1.1em;
+    left: 0;
+    background-color: $white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.nav-text::after {bottom: -0.5em;}
+.menu-element:hover:after, .nav-text:hover::after
+{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 0.7;
+}
+.menu-element:active:after
+{
+    background-color: $white;
+    opacity: 1;
+}
+//SLIDER
+.slider-element
+{
+    background-color: $white;
+    opacity: 0.3;
+}
+.slider-element:hover
+{
+    opacity: 0.7; cursor: pointer;
+}
+.slider-element:active
+{
+    opacity: 1;
+}
+#explore-btn
+{
+    all:unset;
+    position: relative;
+    
+    background-color: $white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;    
+
+    font-family: "Bellefair", serif;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;    
+}
+#explore-btn:hover {cursor: pointer;}
+#explore-btn:hover::after
+{       
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    content: '';
+    background-color: rgba(126, 126, 126, 0.336);
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+//HOME DESGIN
+#home
+{
+    background: url("../assets/home/background-home-mobile.jpg") no-repeat 0 0 / 100vw 100vh;
+
+    main
+    {            
+        h5 {margin: 2em 0 0 0;}       
+        button{margin-top: 5em;}
+    }
+}
+//DESTINATION
+#destination
+{   
+    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat 0 0 / 100vw 100%;
+    main
+    {        
+        img 
+        {
+            width: 45vw; height: 45vw;
+            margin: 1.5em auto 0 auto;    
+        }
+        #star-list
+        {
+            display: flex;
+            justify-content: center;            
+            gap: 2em;
+            margin-top: 2em;
+        }
+        .star-title
+        {
+            margin:0.5em 0 0 0;
+            color:$white;
+            font-size: 56px; font-family: "Bellefair", serif;
+            text-transform: uppercase;
+        }
+        hr {margin: 2em auto 2em auto;}
+        .distance-title,.trv-time-title
+        { 
+            font-size: 14px;
+            margin: 2em 0 1em 0;
+        }
+        .distance-content,.trv-time-content{font-size: 28px;}
+        .trv-time-content{margin-bottom: 2em;}
+    } 
+}
+//CREW
+#crew
+{
+    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat 0 0 / 100vw 100%;
+    main
+    {
+        img 
+        {
+            width: auto; height: 30vh;
+            margin: 2em auto 0 auto;                
+        }
+        #crew-list .slider-element
+        {
+            padding: 0.27em;         
+            border-radius: 50%;
+        }
+        .crew-job {color: $white; opacity: 0.5;margin: 1.5em auto 0.2em auto;}
+        .crew-title {margin-bottom: 0.5em;}  
+        #crew-img-desktop {display: none;}   
+    }
+}
+//TECHNOLOGY
+#technology
+{
+    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat 0 0 / 100vw 100%;
+    main
+    {
+        img 
+        {
+            width: 100%; height: auto;
+            margin: 2em auto 0 auto;                
+        }
+        .tech-element
+        {
+            color:$white;            
+            width: 40px;
+            height: 40px;     
+            line-height: 40px;            
+            border-radius: 50%;
+            border:1px solid rgba(255, 255, 255, 0.521);
+            transition: background-color 0.25s ease-in-out;
+        }
+        .tech-element:hover
+        {
+            color:$black;  
+            background-color: $white;          
+            border:1px solid $white;
+            cursor: pointer;
+        }        
+        #tech-title
+        {
+            font-family: "Barlow";
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color:$blue-space;
+            margin: 0 0 0.5em 0;
+        }
+        .info-title {margin-bottom: 0.5em;}        
+    }
+}

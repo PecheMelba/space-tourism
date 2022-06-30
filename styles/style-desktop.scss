@@ -1,0 +1,230 @@
+@media all and (min-width: 900px)
+{
+    //===========UTILITY CLASS===============
+    .big-title {font-size: 150px}
+    .smaller-title {font-size: 28px;}
+    .description-txt 
+    {
+        font-size: 18px;line-height: 32px; 
+        width: 100%;        
+    }
+    body {text-align: left;}
+    #btn-menu {display: none;}    
+    .info-title { font-size: min(4vw,56px); }
+    //===========INTERACTIVE ELEMENTS===============
+    .menu-element, .nav-text
+    {
+        color:rgba(255, 255, 255, 0.8)!important;
+        font-weight: 400!important;
+    }
+    .menu-element label{color:white!important;}
+
+    header
+    {
+        width: 100%;
+        //max-width: 1500px;
+        #site-icon {margin-left: 2em;}
+        .menu-element::after, .nav-text::after{bottom: -2em;}
+        #menu 
+        {
+            all:unset!important;  
+            list-style-type: none!important;
+    
+            display: flex!important;
+            justify-content: center!important;
+            align-items: center!important;
+            gap: 2em!important;
+    
+            background-color: rgba(255, 255, 255, 0.07)!important;         
+            backdrop-filter: blur(81.5485px)!important;
+            padding: 2em!important;                   
+            width: 50%;
+            min-width: 500px;
+            border:1px red solid;
+            
+            #btn-close-menu {display: none!important;}
+            .menu-element:first-of-type,.menu-element{margin: inherit!important;}            
+        }        
+    }
+
+    //HOME
+    #home
+    {
+        background: url("../assets/home/background-home-desktop.jpg") no-repeat 0 0 / 100vw 100vh;
+        main
+        {     
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            margin: 12em auto 0 auto;            
+            
+            h5 {margin: 2em 0 0 0;}             
+            button{margin-top: 5em;}
+
+            #first-column
+            {                
+                width: 56%;    
+                max-width: 510px;                
+            }
+            #explore-btn
+            {
+                font-size: 32px;
+                align-self: end;
+                width: 274px!important;
+                height: 274px!important;
+            }
+            #explore-btn:hover::after
+            {                
+                width: 450px;
+                height: 450px;
+            }
+        }
+    }
+    //DESTINATION
+    #destination
+    {   
+        background: url("../assets/destination/background-destination-desktop.jpg") no-repeat 0 0 / 100vw 100%;
+        main
+        { 
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            margin: 2em auto 0 auto;            
+
+            #firt-column{width: 40%;}
+            #second-column
+            {
+                width: 40%;
+                margin: 6em auto 0 auto;   
+                
+                #star-list{justify-content: left;}
+                .star-title {font-size: 100px!important;}
+                #star-infos-container
+                {
+                    display: flex;
+                    gap: 4em;
+                }               
+            }
+            img 
+            {
+                width: 40vw;
+                max-width: 445px;
+                max-height: 445px;
+                height: 40vw;
+                margin: 6em 0 0 4em;
+            }            
+        }
+    }
+    //CREW
+    #crew
+    {   
+        display: flex; 
+        flex-direction: column;
+        background: url("../assets/crew/background-crew-desktop.jpg") no-repeat 0 0 / 100vw 100%;
+        main
+        {             
+            display: flex;
+            justify-content: space-between;
+
+            width: 90%; 
+            flex: 1;             
+            max-width: 1100px;
+            margin: 0em auto 0 auto;
+
+            .crew-img, hr {display: none}
+            #first-column
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 50%; 
+                max-width: 500px;                   
+
+                #crew-list{order: 1;}   
+                .slider-element {width: 15px; height: 15px;}  
+                .crew-job {font-size: 32px; margin: 2em 0 0 0;}
+                .description-txt{ width: 100%; margin: 0 0 4em 0;}                 
+            }
+            #second-column 
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                #crew-img-desktop
+                {
+                    display: block;
+                    height: min(60vw,80vh);
+                    width: auto;
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+
+    //TECH
+    #technology
+    {
+        background: url("../assets/technology/background-technology-desktop.jpg") no-repeat 0 0 / 100vw 100%;
+        main
+        {
+            width: 80%;
+            min-width: 800px;
+            max-width: 1200px;
+            margin: 4em auto 0 auto;
+            #tech-container
+            {                
+                display: flex;
+                justify-content: start;
+                gap:3vw;
+                
+                margin-top: 8vw;
+                // border: 1px rgb(255, 251, 0) solid;
+                
+                #tech-infos-container 
+                {                    
+                    // border: 1px red solid;
+                    width: 50%;
+
+                    .description-txt {max-width: 502px; margin: 0;}             
+                    #tech-title {margin: 0;}
+                    .info-title {margin-bottom: 0em; font-size: min(4vw, 56px);}
+                }
+                #tech-list 
+                {
+                    flex-direction: column;
+                    justify-content: start;
+                    margin: 0;                    
+
+                    .tech-element
+                    {     
+                        width: 20vw;                             
+                        height: 20vw;                             
+                        max-width: 80px;
+                        max-height: 80px;     
+                        line-height: 80px;            
+                        text-align: center;
+                        font-size: 32px;
+                    }
+                }
+
+                img 
+                {
+                    position: absolute;
+                    top:20vh;
+                    right: 0;
+                    order:1;
+                    width: 35vw;
+                    max-width: 515px;
+                    height: 40vw;
+                    max-height: 515px;
+
+                }
+            }
+        }
+    }
+}
