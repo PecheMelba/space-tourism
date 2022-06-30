@@ -30,7 +30,7 @@
     font-weight: 400 !important;
   }
 
-  .menu-element label {
+  .menu-element span {
     color: white !important;
   }
 
@@ -62,7 +62,7 @@
   header #menu .menu-element:first-of-type, header #menu .menu-element {
     margin: inherit !important;
   }
-  header #menu .menu-element label {
+  header #menu .menu-element span {
     display: none;
   }
 

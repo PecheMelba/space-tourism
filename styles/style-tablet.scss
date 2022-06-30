@@ -17,7 +17,7 @@
         color:rgba(255, 255, 255, 0.8)!important;
         font-weight: 400!important;
     }
-    .menu-element label{color:white!important;}
+    .menu-element span{color:white!important;}
 
     header
     {
@@ -41,7 +41,7 @@
             
             #btn-close-menu {display: none!important;}
             .menu-element:first-of-type,.menu-element{margin: inherit!important;}  
-            .menu-element label {display: none;}          
+            .menu-element span {display: none;}          
         }        
     }
 
