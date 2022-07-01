@@ -33,7 +33,6 @@ handleDesktopChange(mediaQueryDesktop)
 //MOBILE MENU
 document.getElementById("btn-menu").addEventListener('click', ()=>
 {
-    // console.log("pouuuuet");
     document.getElementById("menu").style.display = "block";
 });
 document.getElementById("btn-close-menu").addEventListener('click', ()=>
